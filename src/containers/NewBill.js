@@ -28,13 +28,13 @@ export default class NewBill {
     const validFileTypes = new Set(["jpg", "jpeg", "png"]);
     // Extraction de l'extension du fichier
     const fileType = file.name.split(".").pop().toLowerCase();
-    // La méthode has() du Set vérifie rapidement si l'extension est autorisée
+    // La méthode has() du Set pour vérifier rapidement si l'extension est autorisée
     const isValidFile = validFileTypes.has(fileType);
     // Sélection du bouton de soumission du formulaire
     const sendButton = this.document.querySelector('button[type="submit"]');
-    // Le bouton est désactivé (!isValidFile) si le fichier n'est pas valide
+    // Le bouton est désactivé si le fichier n'est pas valide
     sendButton.disabled = !isValidFile;
-    // Si le fichier n'est pas valide, afficher une alerte et arrêter le traitement
+    // Si le fichier n'est pas valide, afficher une alerte.
     if (!isValidFile) {
       alert(
         `Les formats de fichiers acceptés pour le justificatif sont les suivants : ${[
