@@ -3,6 +3,7 @@ import ErrorPage from "./ErrorPage.js";
 import LoadingPage from "./LoadingPage.js";
 
 import Actions from "./Actions.js";
+
 const row = (bill) => {
   return `
     <tr>
